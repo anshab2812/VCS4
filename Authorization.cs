@@ -8,7 +8,7 @@ namespace BeautySalon
         public Authorization()
         {
             InitializeComponent();
-            textBoxLogin.Text = textBoxPassword;
+            textBoxLogin.Text = textBoxPassword + "Hello, this is my labwork4!";
         }
         
         private void loginButton_Click(object sender, EventArgs e)
@@ -16,6 +16,7 @@ namespace BeautySalon
             bool result = true;
             try
             {
+                textBoxPassword.Text = textBoxLogin.Text;
                 DB_operatios operation = new DB_operatios();
                 result = operation.Auth(textBoxLogin.Text, textBoxPassword.Text);
                 if (result == true)
