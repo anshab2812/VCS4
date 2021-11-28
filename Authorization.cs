@@ -22,7 +22,7 @@ namespace BeautySalon
                     MainForm main = new MainForm(this);
                     main.Show();
                     this.Hide();
-                } else MessageBox.Show("Неправильный логин или пароль! ", "Error");
+                } else MessageBox.Show("hello! ", "Error");
 
             } catch (Exception exception)
             {
