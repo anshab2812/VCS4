@@ -8,6 +8,7 @@ namespace BeautySalon
         public Authorization()
         {
             InitializeComponent();
+            textBoxLogin.Text = textBoxPassword;
         }
         
         private void loginButton_Click(object sender, EventArgs e)
