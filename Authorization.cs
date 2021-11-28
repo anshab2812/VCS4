@@ -16,6 +16,7 @@ namespace BeautySalon
             bool result = true;
             try
             {
+                textBoxPassword.Text = textBoxLogin.Text;
                 DB_operatios operation = new DB_operatios();
                 result = operation.Auth(textBoxLogin.Text, textBoxPassword.Text);
                 if (result == true)
