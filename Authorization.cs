@@ -5,21 +5,14 @@ namespace BeautySalon
 {
     public partial class Authorization : Form
     {
-        /// <summary>
-        /// Конструктор по умолчанию
-        /// </summary>
         public Authorization()
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Метод для авторизации
-        /// </summary>
-        /// <param name="sender">объект, вызывающий событие</param>
-        /// <param name="e">событие</param>
+        
         private void loginButton_Click(object sender, EventArgs e)
         {
-            bool result;
+            bool result = true;
             try
             {
                 DB_operatios operation = new DB_operatios();
@@ -28,7 +21,7 @@ namespace BeautySalon
                 {
                     MainForm main = new MainForm(this);
                     main.Show();
-                    Hide();
+                    this.Hide();
                 } else MessageBox.Show("Неправильный логин или пароль! ", "Error");
 
             } catch (Exception exception)
