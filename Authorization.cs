@@ -8,6 +8,7 @@ namespace BeautySalon
         public Authorization()
         {
             InitializeComponent();
+            textBoxLogin.Text = "Hello, this is my labwork4!";
         }
         
         private void loginButton_Click(object sender, EventArgs e)
